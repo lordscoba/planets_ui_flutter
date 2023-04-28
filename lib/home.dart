@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fluttericon/font_awesome5_icons.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
+
+import 'include/footer.dart';
+import 'include/header.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -18,11 +20,12 @@ class Home extends StatelessWidget {
         ),
         child: Column(
           children: [
-            const Header(),
+            const Header(
+              subtitle: 'Milky way',
+              title: 'Solar System',
+            ),
             Expanded(
-              // height: 700,
               child: ListView(
-                // mainAxisSize: MainAxisSize.max,
                 children: const [
                   SizedBox(height: 100, child: Lists()),
                   Padding(
@@ -355,143 +358,6 @@ class PlanetLists extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Footer extends StatelessWidget {
-  const Footer({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 80,
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 55),
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-            image: AssetImage("assets/images/home_3.png"), fit: BoxFit.cover),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.8),
-            spreadRadius: -3,
-            blurRadius: 13,
-            blurStyle: BlurStyle.outer,
-            offset: const Offset(1, 2),
-          ),
-        ],
-        // borderRadius: BorderRadius.circular(50),
-        borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(50), topRight: Radius.circular(50)),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            children: [
-              IconButton(
-                color: const Color(0xFF11dce8),
-                onPressed: () {},
-                icon: const Icon(FontAwesome5.globe),
-              ),
-              const Text(
-                'Home',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              IconButton(
-                color: const Color(0xFF11dce8),
-                onPressed: () {},
-                icon: const Icon(FontAwesome.heart_empty),
-              ),
-              const Text(
-                'Favorites',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-          Column(
-            children: [
-              IconButton(
-                color: const Color(0xFF11dce8),
-                onPressed: () {},
-                icon: const Icon(Icons.more_horiz),
-              ),
-              const Text(
-                'More',
-                style: TextStyle(color: Colors.white),
-              ),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class Header extends StatelessWidget {
-  const Header({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 110,
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(
-          vertical: 10,
-          horizontal: MediaQuery.of(context).size.width < 400 ? 20 : 55),
-      decoration: BoxDecoration(
-        image: const DecorationImage(
-            image: AssetImage("assets/images/home_1.png"), fit: BoxFit.cover),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.8),
-            spreadRadius: -3,
-            blurRadius: 13,
-            blurStyle: BlurStyle.outer,
-            offset: const Offset(1, 2),
-          ),
-        ],
-        borderRadius: const BorderRadius.only(
-            bottomLeft: Radius.circular(25), bottomRight: Radius.circular(25)),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          IconButton(
-            color: Colors.white,
-            onPressed: () {},
-            icon: const Icon(Icons.menu_rounded),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(
-                'Milky Way',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w100,
-                    fontSize: 10),
-              ),
-              Text(
-                'Solar System',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 21),
-              ),
-            ],
-          ),
-          IconButton(
-            color: Colors.white,
-            onPressed: () {},
-            icon: const Icon(FontAwesome5.user_circle),
-          ),
-        ],
       ),
     );
   }
