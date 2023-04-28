@@ -37,6 +37,9 @@ flutter:
     - assets/images/mars_image.png
     - assets/images/venus_image.png
     - assets/images/earth_image.png
+    - assets/images/background_details.png
+    - assets/images/background_color.png
+    - assets/images/tile_background.png
     - assets/json/planet.json
 
   # example:
