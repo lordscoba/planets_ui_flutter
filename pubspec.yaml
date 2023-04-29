@@ -10,10 +10,6 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   fluttericon: ^2.0.0
-  # flutter_bloc: ^7.0.0
-  # equatable: ^2.0.0
-  # bloc: ^7.0.0
-  # flutter_bloc_navigation: ^1.0.0
 
 dev_dependencies:
   flutter_test:
@@ -40,6 +36,11 @@ flutter:
     - assets/images/background_details.png
     - assets/images/background_color.png
     - assets/images/tile_background.png
+    - assets/images/profile_1.png
+    - assets/images/profile_2.png
+    - assets/images/avatar.png
+    - assets/images/progressbar_1.png
+    - assets/images/progressbar_2.png
     - assets/json/planet.json
 
   # example:
