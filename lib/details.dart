@@ -71,12 +71,16 @@ class Header2 extends StatelessWidget {
         children: [
           IconButton(
             color: const Color(0xFFffffff),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
             icon: const Icon(Icons.arrow_back),
           ),
           IconButton(
             color: const Color(0xFFffffff),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, '/favourites');
+            },
             icon: const Icon(Icons.favorite_outline),
           ),
         ],

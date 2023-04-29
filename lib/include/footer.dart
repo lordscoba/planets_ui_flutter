@@ -34,7 +34,9 @@ class Footer extends StatelessWidget {
             children: [
               IconButton(
                 color: const Color(0xFF11dce8),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/home');
+                },
                 icon: const Icon(FontAwesome5.globe),
               ),
               const Text(
@@ -47,7 +49,9 @@ class Footer extends StatelessWidget {
             children: [
               IconButton(
                 color: const Color(0xFF11dce8),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/favourites');
+                },
                 icon: const Icon(FontAwesome.heart_empty),
               ),
               const Text(
@@ -60,7 +64,9 @@ class Footer extends StatelessWidget {
             children: [
               IconButton(
                 color: const Color(0xFF11dce8),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
                 icon: const Icon(Icons.more_horiz),
               ),
               const Text(

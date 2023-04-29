@@ -216,13 +216,15 @@ class _MyFormState extends State<MyForm> {
                   shadowColor: Colors.transparent),
               child: const Text('Submit'),
               onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  _formKey.currentState!.save();
-                  // ignore: avoid_print
-                  print('Email: $_email');
-                  // ignore: avoid_print
-                  print('Password: $_password');
-                }
+                // if (_formKey.currentState!.validate()) {
+                //   _formKey.currentState!.save();
+                //   // ignore: avoid_print
+                //   print('Email: $_email');
+                //   // ignore: avoid_print
+                //   print('Password: $_password');
+                // }
+
+                Navigator.pushNamed(context, '/home');
               },
             ),
           ),

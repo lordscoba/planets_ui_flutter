@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttericon/font_awesome_icons.dart';
+import 'package:planets/include/drawer.dart';
 
 import 'include/footer.dart';
 import 'include/header.dart';
@@ -10,6 +11,7 @@ class Favourites extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const Draw(),
       body: Container(
         height: double.infinity,
         width: double.infinity,
